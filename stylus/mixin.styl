@@ -1,0 +1,125 @@
+pc()
+  +screen__up(768px)
+    {block}
+mobile()
+  +screen__down(768px)
+    {block}
+
+print()
+  @media print
+    {block}
+
+screen__up(minW)
+  @media screen and (min-width: minW)
+    {block}
+
+screen__down(maxW)
+  @media screen and (max-width: maxW)
+    {block}
+
+hiddenScrollBar()
+  &::-webkit-scrollbar
+    display none
+  &::-webkit-scrollbar-thumb
+    background-color #fff
+
+searchBarTransition(params = all, t = .3s)
+  transition params t
+
+backgroundImgSetting(size)
+  background-repeat no-repeat
+  background-size size
+  background-position center center
+
+limitRow(maxHeight, row)
+  min-height maxHeight
+  overflow hidden
+  text-overflow ellipsis
+  display -webkit-box
+  -webkit-line-clamp row
+  -webkit-box-orient vertical
+
+hideNumberArrow()
+  appearance none
+  -o-appearance none
+  -ms-appearance none
+  -webkit-appearance none
+  -moz-appearance: textfield
+
+setBtnStyle(c b bgc)
+  color c
+  border b
+  background-color bgc
+
+setBtnHoverStyle(c b bgc)
+  &:hover
+    setBtnStyle(c, b, bgc)
+
+setBtnDisabledStyle(c b bgc)
+  &[disabled], &.disabled
+    setBtnStyle(c, b, bgc)
+    cursor not-allowed
+    pointer-events none
+
+setTextStyle(s w fc)
+  font-size s
+  font-weight w
+  color fc
+
+elementDisabled()
+  opacity .6
+  pointer-events none
+  cursor not-allowed
+
+screen1366down()
+  @media screen and (max-width: 1365px)
+    {block}
+
+screen1366up()
+  @media screen and (min-width: 1366px)
+    {block}
+
+screen1366down()
+  @media screen and (max-width: 1366px)
+    {block}
+
+screen1024up()
+  @media screen and (min-width: 1024px)
+    {block}
+
+screen1024down()
+  @media screen and (max-width: 1023px)
+    {block}
+
+screen768up()
+  @media screen and (min-width: 768px)
+    {block}
+
+screen768down()
+  @media screen and (max-width: 767px)
+    {block}
+
+screen520up()
+  @media screen and (min-width: 520px)
+    {block}
+
+screen520down()
+  @media screen and (max-width: 519px)
+    {block}
+
+pageContainer()
+  padding .25rem
+
+indexPageSetting()
+  height 'calc(100vh - %s - %s)' % (header_h footer_h)
+
+dialogContainer()
+  border 5px solid dialog_border_c
+  background-color dialog_bg_c
+  padding .5rem
+  min-height dialog_h
+  width 100%
+  transform translateY(- 100vh)
+  transition transform .3s
+  &.show
+    transform translateY(0)

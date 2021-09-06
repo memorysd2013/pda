@@ -1,0 +1,55 @@
+/**
+ 禁止 double-tap 手勢
+ https://medium.com/@littleDog/%E5%A6%82%E4%BD%95%E8%A7%A3%E6%B1%BA-user-scalable-no-%E5%B1%AC%E6%80%A7%E8%A2%ABios-safari-ignore-e6a0531050ba
+ */
+
+// import NotoSansTC
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css)
+
+html
+  font-size 16px
+html, body
+  touch-action manipulation
+
+body
+  width 100%
+  margin 0
+  padding 0
+  font-size 1rem
+  box-sizing border-box
+  overflow-x hidden
+  // pinkoi 的文字設定
+  // font-family "Helvetica Neue",Helvetica,Arial,"PingFang TC","Heiti TC","Microsoft JhengHei",sans-serif
+  // Apple 的文字設定
+  // font-family 'Noto Sans TC', "Microsoft JhengHei", "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial",sans-serif
+  // font-family Helvetica, 'Avenir', Arial, "微軟正黑體", "Microsoft JhengHei,Arial", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+  // 可以阻止 chrome 下拉重整
+  overscroll-behavior-y contain
+
+  *
+    box-sizing border-box
+
+  *:focus
+    outline 0
+
+  a
+    color inherit
+    text-decoration none
+
+  h1, h2, h3, p
+    margin 0
+
+  label
+    font-size 1rem
+  button
+    font-family inherit
+    padding 0
+
+  textarea
+    font-family inherit
+
+  [moveable="true"]
+    user-select none

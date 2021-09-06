@@ -1,0 +1,13 @@
+{
+  "caseListBeginWeekday": 0,
+  "caseListDurationOfWeek": 12,
+  "loginTokenRetryInterval": 30,
+  "failedReason": [
+    "查無此人",
+    "客戶取消",
+    "客戶改期",
+    "其他"
+  ],
+  "apiFailedRetryInterval": 2,
+  "apiFailedRetryTimes": 3
+}
