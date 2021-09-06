@@ -2,7 +2,7 @@
   .Login.flex.column.between
     .form.flex.column
       .title
-        h1 閎康取送件系統
+        h1 閎康超級取送件系統
         span.version {{ version }}
       .col(v-for="(col, key, index) in form")
         span.colTitle {{ col.title }}
